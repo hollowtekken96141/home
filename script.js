@@ -26,7 +26,7 @@ function spawnBalls(count, isAtTop) {
 
 // Initial spawn of balls
 window.addEventListener('load', () => {
-    spawnBalls(100, true); // Spawn 100 balls when the page is first loaded
+    spawnBalls(50, true); // Spawn 50 balls when the page is first loaded
 });
 
 // Handle scrolling
