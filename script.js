@@ -5,7 +5,7 @@ document.body.appendChild(ballsOverlay);
 const balls = [];
 
 function spawnBalls(count, isAtTop) {
-    for (let i = 0; i < count * 2; i++) { // Spawn twice as many balls
+    for (let i = 0; i < count * 4; i++) { // Spawn twice as many balls
         const ball = document.createElement('div');
         ball.classList.add('ball');
         const size = 10 + Math.random() * 20; // Random sizes between 10px and 30px
@@ -26,7 +26,7 @@ function spawnBalls(count, isAtTop) {
 
 // Initial spawn of balls
 window.addEventListener('load', () => {
-    spawnBalls(10, true); // Spawn 10 balls when the page is first loaded
+    spawnBalls(100, true); // Spawn 100 balls when the page is first loaded
 });
 
 // Handle scrolling
@@ -69,7 +69,7 @@ function animateBalls() {
     });
 
     // Decay scroll velocity
-    scrollVelocity *= 0.9;
+    scrollVelocity *= 0.1;
 
     requestAnimationFrame(animateBalls);
 }
