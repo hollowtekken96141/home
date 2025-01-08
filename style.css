@@ -206,6 +206,11 @@ ol li:nth-child(4) {
     height: 17.5vh;
     background-image: url('fire.gif');
   }
+  ol li:nth-child(13) {
+    top: 90vh;
+    height: 10vh;
+    background-image: url('fire.gif');
+  }
 /* Balls Overlay */
 #balls-overlay {
   position: fixed;
