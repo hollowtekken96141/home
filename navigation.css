@@ -1,0 +1,43 @@
+/* Navigation and link styling */
+ol {
+  list-style: none;
+  counter-reset: days-counter;
+  font-size: 2rem;
+  position: relative;
+}
+
+/* Link styling with pulse animation */
+ol a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block; /* Ensures the scaling works as expected */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  animation: pulse 1.5s infinite ease-in-out; /* Apply the pulse animation */
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* Add thicker black outline */
+}
+
+ol a:hover {
+  animation: none; /* Stop pulsing on hover */
+  transform: scale(2); /* Increase the size to create a bulge effect */
+}
+
+/* Counter display */
+ol li:before {
+  content: counter(days-counter);
+  z-index: -5;
+  position: absolute;
+  opacity: 0;
+  font-size: 30vh;
+  font-family: "Major Mono Display", monospace;
+  transform: translate(-50%, 0%);
+}
+
+/* Position counters left/right */
+ol li:nth-child(odd):before { left: 0%; }
+ol li:nth-child(even):before { left: 100%; }
+
+/* Selection styling */
+ol li::selection {
+  color: white;
+  background: #2d863c;
+}

@@ -1,0 +1,22 @@
+/* Visual effects and overlays */
+
+/* Balls Overlay */
+#balls-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow clicks through this layer */
+  z-index: 10;
+  overflow: hidden;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  /* Default styles - will be overridden by JavaScript */
+  background-color: rgba(255, 255, 255, 0.9); /* White with slight opacity */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect for snowballs */
+  transition: opacity 0.2s linear; /* Smooth fade-out for disappearing balls */
+}

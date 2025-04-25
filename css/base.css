@@ -1,0 +1,33 @@
+/* Optimize font loading with font-display */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../Buffied-GlqZ.ttf') format('truetype');
+    font-display: swap; /* Improves perceived loading performance */
+}
+  
+/* Load external fonts with display=swap for better performance */
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display|Neuton&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* CSS custom properties for modular GIF selection */
+:root {
+  --body-background: url("1712162540983642144.gif");
+  --first-item-background: url('ezgif-7-69b4f968e1.gif');
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+  font-family: "CustomFont", serif;
+  background: var(--body-background), linear-gradient(to bottom left, #ffffff, #000000);
+  background-size: 250px, 100%;
+  /* center the elements horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

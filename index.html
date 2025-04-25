@@ -2,44 +2,24 @@
     <meta charset="UTF-8">
     <title>hollowtekken96141</title>
     <link rel="icon" href="assets/webp/favicon.webp"/>
-    <link rel="preload" as="style" href="style.css">
+    <link rel="preload" as="style" href="base.css">
+    <link rel="preload" as="style" href="animations.css">
+    <link rel="preload" as="style" href="navigation.css">
+    <link rel="preload" as="style" href="layout.css">
+    <link rel="preload" as="style" href="effects.css">
     <link rel="preload" as="image" href="assets/webp/garments_2.webp">
     <link rel="preload" as="image" href="assets/webp/hubert_menu.webp">
     <link rel="preload" as="image" href="assets/webp/banner.webp">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FE1LP1VTK6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-FE1LP1VTK6');
-
-        function unhide() {
-            scrollElement.querySelector(".onclick-hide").style.display = 'none';
-            scrollElement.querySelectorAll(".initial-hide").forEach((e) => {
-                e.style.opacity = '1';
-                e.style.height = 'auto';
-            });
-            handleAvatarRows();
-        }
-
-        function unhideHeader() {
-            scrollElement.querySelector(".header-hide").style.display = 'none';
-            scrollElement.querySelectorAll(".initial-header-hide").forEach((e) => {
-                e.style.opacity = '1';
-                e.style.display = 'flex';
-            });
-            handleAvatarRows();
-        }
-    </script>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="effects.css">
+    <!-- Removed unused functions that were causing errors -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 <ol>
-    <li><a href="https://www.instagram.com/emotionalsoldiers/">Hollowtekken96141</a></li>
+    <li><a href="https://www.instagram.com/hollowtekken/">Hollowtekken96141</a></li>
     <li><a href="https://airbit.com/tekken96141">Buy Beats on Airbit.com</a></li>
     <li><a href="https://traktrain.com/tekken96141">Buy Beats on Traktrain.com</a></li>
     <li><a href="https://soundcloud.com/swords2">Swords2 Soundcloud</a></li>
@@ -53,11 +33,7 @@
 <!-- Balls Overlay -->
 <div id="balls-overlay"></div>
 
+<!-- Load configuration file first -->
+<script src="gifs-config.js"></script>
+<!-- Then load main script -->
 <script src="script.js"></script>
-<svg width="0" height="0" style="position: absolute;">
-    <filter id="dithering">
-        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" />
-        <feDisplacementMap in="SourceGraphic" scale="3" />
-    </filter>
-</svg>
-

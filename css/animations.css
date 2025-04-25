@@ -1,0 +1,41 @@
+/* SVG animations and keyframes */
+svg {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 30px;
+  height: auto;
+  display: block;
+  animation: fadeOut 0.5s 10s forwards;
+}
+
+svg #offset {
+  animation: removeOffset 2s 5 ease-in-out;
+}
+
+@keyframes removeOffset {
+  37.5% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    stroke-dashoffset: var(--offset);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
+}

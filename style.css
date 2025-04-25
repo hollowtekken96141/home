@@ -1,8 +1,11 @@
+/* Optimize font loading with font-display */
 @font-face {
-    font-family: 'CustomFont'; /* Name of the font */
-    src: url('Buffied-GlqZ.ttf') format('truetype'); /* Path to the .ttf file */
-  }
+    font-family: 'CustomFont';
+    src: url('Buffied-GlqZ.ttf') format('truetype');
+    font-display: swap; /* Improves perceived loading performance */
+}
   
+/* Load external fonts with display=swap for better performance */
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display|Neuton&display=swap");
 * {
   box-sizing: border-box;
@@ -10,20 +13,25 @@
   margin: 0;
 }
 
+/* CSS custom properties for modular GIF selection */
+:root {
+  --body-background: url("1712162540983642144.gif");
+  --first-item-background: url('ezgif-7-69b4f968e1.gif');
+}
+
 body {
   min-height: 100vh;
   color: white;
   font-family: "CustomFont", serif;
-  background: url("1712162540983642144.gif"), linear-gradient(to bottom left, #ffffff, #000000);
+  background: var(--body-background), linear-gradient(to bottom left, #ffffff, #000000);
   background-size: 250px, 100%;
   /* center the elements horizontally */
   display: flex;
   flex-direction: column;
   align-items: center;
-  filter: url(#dithering); /* Apply the dithering filter to the entire page */
 }
 
-/* display the cursor-svg in the top left corner */
+/* Combined svg styles for better performance */
 svg {
   position: fixed;
   bottom: 1rem;
@@ -31,10 +39,6 @@ svg {
   width: 30px;
   height: auto;
   display: block;
-}
-
-/* animate the cursor-svg to fade out after the path element has been animated enough times to be annoying */
-svg {
   animation: fadeOut 0.5s 10s forwards;
 }
 svg #offset {
@@ -72,6 +76,7 @@ ol a {
     display: inline-block; /* Ensures the scaling works as expected */
     transition: transform 0.3s ease-in-out; /* Smooth transition */
     animation: pulse 1.5s infinite ease-in-out; /* Apply the pulse animation */
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* Add thicker black outline */
 }
 
 ol a:hover {
@@ -86,21 +91,20 @@ ol {
   position: relative;
 }
 
-/* increment the custom counter */
+/* Combined and optimized list item styles */
 ol li {
   counter-increment: days-counter;
-  /* center the content in the viewport */
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-shadow: 0 1px 15px black;
-  /* position relative to absolute position the pseudo element behind the text */
   z-index: 5;
+  position: sticky;
 }
 
-/* display the custom counter with the :before pseudo element, in the very center of the list item */
+/* Counter display */
 ol li:before {
   content: counter(days-counter);
   z-index: -5;
@@ -111,24 +115,14 @@ ol li:before {
   transform: translate(-50%, 0%);
 }
 
-/* added bonus, a more christmas-y selection */
+/* Position counters left/right */
+ol li:nth-child(odd):before { left: 0%; }
+ol li:nth-child(even):before { left: 100%; }
+
+/* Selection styling */
 ol li::selection {
   color: white;
   background: #2d863c;
-}
-
-/* position the custom counter to the left/right for odd/even list items */
-ol li:nth-child(odd):before {
-  left: 0%;
-}
-
-ol li:nth-child(even):before {
-  left: 100%;
-}
-
-/* add position sticky and position each subsequent list item 7.5vh from the previous */
-ol li {
-  position: sticky;
 }
 
 /* ! have the list items occupy enough vertical space to cover (viewport - vertical offset)
@@ -137,8 +131,7 @@ otherwise the elements would collapse to the top once the page reaches the last 
 ol li:nth-child(1) {
   top: 2vh;
   height: 100vh;
-  background-image: url('ezgif-7-69b4f968e1.gif')
-
+  background-image: var(--first-item-background);
 }
 
 ol li:nth-child(2) {
@@ -226,8 +219,8 @@ ol li:nth-child(4) {
 .ball {
   position: absolute;
   border-radius: 50%;
+  /* Default styles - will be overridden by JavaScript */
   background-color: rgba(255, 255, 255, 0.9); /* White with slight opacity */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect for snowballs */
   transition: opacity 0.2s linear; /* Smooth fade-out for disappearing balls */
 }
-

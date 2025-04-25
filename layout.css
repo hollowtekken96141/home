@@ -1,0 +1,93 @@
+/* Layout and positioning styles */
+
+/* Combined and optimized list item styles */
+ol li {
+  counter-increment: days-counter;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-shadow: 0 1px 15px black;
+  z-index: 5;
+  position: sticky;
+}
+
+/* List item positioning with staggered sticky positions */
+ol li:nth-child(1) {
+  top: 2vh;
+  height: 100vh;
+  background-image: var(--first-item-background);
+}
+
+ol li:nth-child(2) {
+  top: 7.5vh;
+  height: 92.5vh;
+  background-image: url('lantern_onBk-ani.gif');
+}
+
+ol li:nth-child(3) {
+  top: 15vh;
+  height: 85vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(4) {
+  top: 22.5vh;
+  height: 77.5vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(5) {
+  top: 30vh;
+  height: 70vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(6) {
+  top: 37.5vh;
+  height: 62.5vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(7) {
+  top: 45vh;
+  height: 55vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(8) {
+  top: 52.5vh;
+  height: 47.5vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(9) {
+  top: 60vh;
+  height: 40vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(10) {
+  top: 67.5vh;
+  height: 32.5vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(11) {
+  top: 75vh;
+  height: 25vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(12) {
+  top: 82.5vh;
+  height: 17.5vh;
+  background-image: url('fire.gif');
+}
+
+ol li:nth-child(13) {
+  top: 90vh;
+  height: 10vh;
+  background-image: url('fire.gif');
+}
