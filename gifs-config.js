@@ -7,7 +7,8 @@ const gifConfig = {
     bodyBackgrounds: [
         '1712162540983642144.gif',
         'Spirale.gif',
-        'goop3.gif'
+        'goop3.gif',
+        'Untitled_video_-_Made_with_Clipchamp_1.gif'
     ],
     
     // GIFs for first list item
@@ -45,6 +46,12 @@ const gifConfig = {
         },
         {
             backgroundImage: 'url("ball44.gif")',
+            backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        },
+        {
+            backgroundImage: 'url("starflare.gif")',
             backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
