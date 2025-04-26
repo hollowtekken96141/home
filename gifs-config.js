@@ -6,14 +6,14 @@ const gifConfig = {
     // GIFs for body background
     bodyBackgrounds: [
         '1712162540983642144.gif',
-        'Spirale.gif',
-        'AIBOOK.gif'
+        'Spirale.gif'
     ],
     
     // GIFs for first list item
     firstItemBackgrounds: [
         'ezgif-7-69b4f968e1.gif',
-        'OPTIMezgif-3bdd5674441306.gif'
+        'OPTIMezgif-3bdd5674441306.gif',
+        'ezgif-578c13bec70baf.gif'
     ],
     
     // Options for ball overlay (could be colors or GIFs)
@@ -25,12 +25,12 @@ const gifConfig = {
         },
         // Blue style
         {
-            backgroundColor: 'rgba(0, 55, 255, 0.9)',
-            boxShadow: '0 0 10px rgba(173, 216, 230, 0.8)'
+            backgroundColor: 'rgba(0, 55, 255, 0.48)',
+            boxShadow: '0 0 10px rgb(255, 255, 255)'
         },
         // Custom styles with GIFs - now shows the full GIF with no glow
         {
-            backgroundImage: 'url("fire.gif")',
+            backgroundImage: 'url("webring2.gif")',
             backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
@@ -38,6 +38,12 @@ const gifConfig = {
         },
         {
             backgroundImage: 'url("aniabstractlight.gif")',
+            backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        },
+        {
+            backgroundImage: 'url("ball44.gif")',
             backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'

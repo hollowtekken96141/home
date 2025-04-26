@@ -192,13 +192,14 @@ function animateBalls(timestamp) {
             // Check if this is a GIF ball (ball-container class)
             const isGifBall = ball.element.classList.contains('ball-container');
             
-            // Only decay opacity for non-GIF balls
+            // For non-GIF balls, decay opacity when they're off-screen
             if (newTop > window.innerHeight && !isGifBall) {
                 ball.opacity -= 0.01; // Faster opacity decay for better performance
             }
-
-            // Remove invisible balls
-            if (ball.opacity <= 0) {
+            
+            // For GIF balls, remove them when they're far off-screen (but don't change opacity)
+            if ((isGifBall && newTop > window.innerHeight * 2) || // Remove GIF balls when they're far off-screen
+                (!isGifBall && ball.opacity <= 0)) {              // Remove regular balls when they're invisible
                 ball.element.remove();
                 balls.splice(i, 1);
                 continue;
