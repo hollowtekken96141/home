@@ -7,13 +7,13 @@ const gifConfig = {
     bodyBackgrounds: [
         '1712162540983642144.gif',
         'Spirale.gif',
-        'goop2.gif'
+        'goop3.gif'
     ],
     
     // GIFs for first list item
     firstItemBackgrounds: [
         'ezgif-7-69b4f968e1.gif',
-        'optim33.gif',
+        'optim34.gif',
         '23.gif'
     ],
     
