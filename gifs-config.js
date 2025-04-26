@@ -6,14 +6,15 @@ const gifConfig = {
     // GIFs for body background
     bodyBackgrounds: [
         '1712162540983642144.gif',
-        'Spirale.gif'
+        'Spirale.gif',
+        'goop2.gif'
     ],
     
     // GIFs for first list item
     firstItemBackgrounds: [
         'ezgif-7-69b4f968e1.gif',
-        'OPTIMezgif-3bdd5674441306.gif',
-        'ezgif-578c13bec70baf.gif'
+        'optim33.gif',
+        '23.gif'
     ],
     
     // Options for ball overlay (could be colors or GIFs)
