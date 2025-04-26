@@ -20,16 +20,6 @@ const gifConfig = {
     
     // Options for ball overlay (could be colors or GIFs)
     ballStyles: [
-        // Default white style
-        {
-            backgroundColor: 'rgba(255, 255, 255, 0.9)',
-            boxShadow: '0 0 10px rgba(255, 255, 255, 0.8)'
-        },
-        // Blue style
-        {
-            backgroundColor: 'rgba(0, 55, 255, 0.48)',
-            boxShadow: '0 0 10px rgb(255, 255, 255)'
-        },
         // Custom styles with GIFs - now shows the full GIF with no glow
         {
             backgroundImage: 'url("flare.gif")',
@@ -40,18 +30,6 @@ const gifConfig = {
         },
         {
             backgroundImage: 'url("aniabstractlight.gif")',
-            backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-        },
-        {
-            backgroundImage: 'url("ball44.gif")',
-            backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-        },
-        {
-            backgroundImage: 'url("starflare.gif")',
             backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
