@@ -31,7 +31,7 @@ const gifConfig = {
         },
         // Custom styles with GIFs - now shows the full GIF with no glow
         {
-            backgroundImage: 'url("webring2.gif")',
+            backgroundImage: 'url("flare.gif")',
             backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
@@ -45,6 +45,18 @@ const gifConfig = {
         },
         {
             backgroundImage: 'url("ball44.gif")',
+            backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        },
+        {
+            backgroundImage: 'url("note.gif")',
+            backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        },
+        {
+            backgroundImage: 'url("spinstar.gif")',
             backgroundSize: 'contain', // 'contain' ensures the whole GIF is visible
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
