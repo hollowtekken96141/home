@@ -6,7 +6,7 @@ const gifConfig = {
     // GIFs for body background
     bodyBackgrounds: [
         '1712162540983642144.gif',
-        'Spirale.gif',
+        '0429.gif',
         'goop3.gif',
         'ezgif-4065eec4fc30cf.gif'
     ],
