@@ -8,7 +8,7 @@ const gifConfig = {
         '1712162540983642144.gif',
         'Spirale.gif',
         'goop3.gif',
-        'Untitled_video_-_Made_with_Clipchamp_1.gif'
+        'ezgif-4065eec4fc30cf.gif'
     ],
     
     // GIFs for first list item
