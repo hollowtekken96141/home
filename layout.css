@@ -13,81 +13,81 @@ ol li {
   position: sticky;
 }
 
-/* List item positioning with staggered sticky positions */
+/* List item positioning with staggered sticky positions - adjusted to avoid header overlap */
 ol li:nth-child(1) {
-  top: 2vh;
+  top: 10vh;
   height: 100vh;
   background-image: var(--first-item-background);
 }
 
 ol li:nth-child(2) {
-  top: 7.5vh;
+  top: 15vh;
   height: 92.5vh;
   background-image: url('lantern_onBk-ani.gif');
 }
 
 ol li:nth-child(3) {
-  top: 15vh;
+  top: 22vh;
   height: 85vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(4) {
-  top: 22.5vh;
+  top: 29vh;
   height: 77.5vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(5) {
-  top: 30vh;
+  top: 36vh;
   height: 70vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(6) {
-  top: 37.5vh;
+  top: 43vh;
   height: 62.5vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(7) {
-  top: 45vh;
+  top: 50vh;
   height: 55vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(8) {
-  top: 52.5vh;
+  top: 57vh;
   height: 47.5vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(9) {
-  top: 60vh;
+  top: 64vh;
   height: 40vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(10) {
-  top: 67.5vh;
+  top: 71vh;
   height: 32.5vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(11) {
-  top: 75vh;
+  top: 78vh;
   height: 25vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(12) {
-  top: 82.5vh;
+  top: 85vh;
   height: 17.5vh;
   background-image: url('fire.gif');
 }
 
 ol li:nth-child(13) {
-  top: 90vh;
+  top: 92vh;
   height: 10vh;
   background-image: url('fire.gif');
 }

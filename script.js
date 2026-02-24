@@ -105,6 +105,13 @@ function spawnBalls(count, isAtTop, style) {
 let lastScrollY = window.scrollY;
 let scrollVelocity = 0;
 
+// Define color mappings for each first item background GIF
+const gifColorMap = {
+    'ezgif-7-69b4f968e1.gif': '#ff00ff', // Magenta
+    'optim34.gif': '#ff1100',            // red
+    '23.gif': '#0099ff'                  // blue
+};
+
 // Set random backgrounds and initialize balls on page load
 window.addEventListener('load', () => {
     // Check if we're using CSS from a subdirectory and adjust paths accordingly
@@ -119,6 +126,11 @@ window.addEventListener('load', () => {
     const firstItemBg = getRandomItem(gifConfig.firstItemBackgrounds);
     document.documentElement.style.setProperty('--first-item-background', `url('${cssPathPrefix}${firstItemBg}')`);
     console.log(`Selected first item background: ${firstItemBg}`);
+    
+    // Update header text color based on the selected first item background
+    const headerColor = gifColorMap[firstItemBg] || '#ffffff'; // Default to white if no mapping exists
+    document.documentElement.style.setProperty('--header-text-color', headerColor);
+    console.log(`Set header text color to: ${headerColor}`);
     
     // Update all list item background images with the correct path prefix
     if (cssPathPrefix) {

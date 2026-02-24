@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>hollowtekken96141</title>
@@ -16,24 +18,58 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="effects.css">
     <!-- Removed unused functions that were causing errors -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<ol>
-    <li><a href="https://www.instagram.com/hollowtekken/">Hollowtekken96141</a></li>
-    <li><a href="https://airbit.com/tekken96141">Buy Beats on Airbit.com</a></li>
-    <li><a href="https://traktrain.com/tekken96141">Buy Beats on Traktrain.com</a></li>
-    <li><a href="https://soundcloud.com/swords2">Swords2 Soundcloud</a></li>
-    <li><a href="https://www.youtube.com/@swords7">Swords2 Youtube</a></li>
-    <li><a href="https://soundcloud.com/citadell">Citadell Soundcloud</a></li>
-    <li><a href="https://www.youtube.com/@lecitadell">Citadell Youtube</a></li>
-    <li><a href="https://soundcloud.com/emotionalsoldiers">emotionalsoldiers SoundCloud</a></li>
-    <li><a href="https://citadell.creator-spring.com/">Merch</a></li>
+<body>
+    <!-- Header Navigation Bar -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">hollowtekken96141</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="rhyme-game/index.html">Rhyme</a></li>
+                <li><a href="https://citadell.neocities.org" target="_blank" rel="noopener">Citadell</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+        <ol>
+            <li><a href="https://www.instagram.com/hollowtekken/">Hollowtekken96141</a></li>
+            <li><a href="https://airbit.com/tekken96141">Buy Beats on Airbit.com</a></li>
+            <li><a href="https://traktrain.com/tekken96141">Buy Beats on Traktrain.com</a></li>
+            <li><a href="https://soundcloud.com/swords2">Swords2 Soundcloud</a></li>
+            <li><a href="https://www.youtube.com/@swords7">Swords2 Youtube</a></li>
+            <li><a href="https://soundcloud.com/citadell">Citadell Soundcloud</a></li>
+            <li><a href="https://www.youtube.com/@lecitadell">Citadell Youtube</a></li>
+            <li><a href="https://soundcloud.com/emotionalsoldiers">emotionalsoldiers SoundCloud</a></li>
+            <li><a href="https://citadell.creator-spring.com/">Merch</a></li>
+        </ol>
+    </div>
+    <!-- Balls Overlay -->
+    <div id="balls-overlay"></div>
 
-</ol>
-<!-- Balls Overlay -->
-<div id="balls-overlay"></div>
-
-<!-- Load configuration file first -->
-<script src="gifs-config.js"></script>
-<!-- Then load main script -->
-<script src="script.js"></script>
+    <!-- Load configuration file first -->
+    <script src="gifs-config.js"></script>
+    <!-- Then load main script -->
+    <script src="script.js"></script>
+    
+    <!-- Navigation script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

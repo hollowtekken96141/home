@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Black+Ops+One&display=swap');
+
+/* Header styling for standalone version */
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #4a5f34;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-logo {
+  max-height: 80px;
+  width: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
+}
+
+.header-title {
+  font-family: 'Black Ops One', cursive;
+  color: #00ff00;
+  text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.3);
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav-item {
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #00ff00;
+  text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-nav-item:hover {
+  color: #00ff00;
+  text-shadow: 2px 2px 6px rgba(0, 255, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+  
+  .header-nav {
+    gap: 10px;
+  }
+  
+  .header-nav-item {
+    font-size: 0.9rem;
+  }
+}

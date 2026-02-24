@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhyme Game</title>
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/header-custom.css">
+  <!-- Preload sparkle gif -->
+  <link rel="preload" href="images/sparkle.gif" as="image">
+  <!-- Phaser 3 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js" defer></script>
+  <script src="js/game.js" defer></script>
+  <style>
+    /* Hide footer only */
+    footer {
+      display: none !important;
+    }
+    
+    /* Ensure game takes full viewport */
+    main {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Loading screen styles */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+      z-index: 9999;
+      transition: opacity 2.5s ease-out;
+      overflow: hidden;
+    }
+
+    .loading-gif {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100vw;
+      min-height: 100vh;
+      width: auto;
+      height: auto;
+      object-fit: fill;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-screen">
+    <img src="images/sparkle.gif" alt="Loading..." class="loading-gif" width="1920" height="1080">
+  </div>
+  <div id="game-container" data-background-url="images/Snapseed.jpg"></div>
+  <div id="user-interface">
+    <div id="top-section">
+      <div class="definition-container">
+        <div class="definition-header">
+          <span class="definition-label">Definition:</span>
+          <button class="definition-toggle">↓</button>
+        </div>
+        <p id="word-definition">Definition: </p>
+      </div>
+      <p id="score-display">Streak: 0</p>
+      <p id="game-over">Dammn Jitt. You really did that.</p>
+    </div>
+    
+    <div id="game-section">
+      <p id="result"></p>
+      <div id="word-section">
+        <div class="input-container">
+          <div class="input-row">
+            <input type="text" id="user-input" placeholder="rhyme?" readonly maxlength="20">
+            <button id="send-button" class="send-key desktop-send"><img src="images/send1.png" alt="SEND" width="50" height="50"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="virtual-keyboard" class="virtual-keyboard">
+      <div class="keyboard-row">
+        <button class="key" data-key="Q"><img src="images/q1.png" alt="Q" width="40" height="40"></button>
+        <button class="key" data-key="W"><img src="images/w1.png" alt="W" width="40" height="40"></button>
+        <button class="key" data-key="E"><img src="images/e1.png" alt="E" width="40" height="40"></button>
+        <button class="key" data-key="R"><img src="images/r1.png" alt="R" width="40" height="40"></button>
+        <button class="key" data-key="T"><img src="images/t1.png" alt="T" width="40" height="40"></button>
+        <button class="key" data-key="Y"><img src="images/y1.png" alt="Y" width="40" height="40"></button>
+        <button class="key" data-key="U"><img src="images/u1.png" alt="U" width="40" height="40"></button>
+        <button class="key" data-key="I"><img src="images/i1.png" alt="I" width="40" height="40"></button>
+        <button class="key" data-key="O"><img src="images/o1.png" alt="O" width="40" height="40"></button>
+        <button class="key" data-key="P"><img src="images/p1.png" alt="P" width="40" height="40"></button>
+      </div>
+      <div class="keyboard-row">
+        <button class="key" data-key="A"><img src="images/a1.png" alt="A" width="40" height="40"></button>
+        <button class="key" data-key="S"><img src="images/s1.png" alt="S" width="40" height="40"></button>
+        <button class="key" data-key="D"><img src="images/d1.png" alt="D" width="40" height="40"></button>
+        <button class="key" data-key="F"><img src="images/f1.png" alt="F" width="40" height="40"></button>
+        <button class="key" data-key="G"><img src="images/g1.png" alt="G" width="40" height="40"></button>
+        <button class="key" data-key="H"><img src="images/h1.png" alt="H" width="40" height="40"></button>
+        <button class="key" data-key="J"><img src="images/j1.png" alt="J" width="40" height="40"></button>
+        <button class="key" data-key="K"><img src="images/k1.png" alt="K" width="40" height="40"></button>
+        <button class="key" data-key="L"><img src="images/l1.png" alt="L" width="40" height="40"></button>
+        <button class="key" data-key="BACKSPACE"><img src="images/back1.png" alt="BACKSPACE" width="40" height="40"></button>
+      </div>
+      <div class="keyboard-row">
+        <button class="key" data-key="Z"><img src="images/z1.png" alt="Z" width="40" height="40"></button>
+        <button class="key" data-key="X"><img src="images/x1.png" alt="X" width="40" height="40"></button>
+        <button class="key" data-key="C"><img src="images/c1.png" alt="C" width="40" height="40"></button>
+        <button class="key" data-key="V"><img src="images/v1.png" alt="V" width="40" height="40"></button>
+        <button class="key" data-key="B"><img src="images/b1.png" alt="B" width="40" height="40"></button>
+        <button class="key" data-key="N"><img src="images/n1.png" alt="N" width="40" height="40"></button>
+        <button class="key" data-key="M"><img src="images/m1.png" alt="M" width="40" height="40"></button>
+        <button id="mobile-send-button" class="send-key mobile-send"><img src="images/send1.png" alt="SEND" width="40" height="40"></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
